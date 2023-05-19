@@ -10,8 +10,38 @@
 
 <body>
   <h1>Workout Tracker</h1>
-  <label for="datepicker">Date:</label>
-  <input type="text" id="datepicker" name="datepicker" onchange="changeDate()">
+
+  <div class="container">
+    <div class="form-row">
+      <label class="inputlabel" for="datepicker">Date:</label>
+      <input class='input' type="text" id="datepicker" name="datepicker" onchange="changeDate()">
+    </div>
+    <div class="form-row">
+      <label class="inputlabel">Body Part:</label>
+      <select class='input' id="bodypart"></select>
+    </div>
+    <div class="form-row">
+      <label class="inputlabel">Exercise:</label>
+      <select class='input' id="exercise"></select>
+    </div>
+    <div class="form-row">
+      <label class="inputlabel">Weight:</label>
+      <input class='input' id="weight" type="number" placeholder="">
+    </div>
+    <div class="form-row">
+      <label class="inputlabel">Reps:</label>
+      <input class='input' id="reps" type="number" placeholder="">
+    </div>
+    <button onclick="addExercise()">Submit</button>
+  </div>
+
+
+  <section>
+
+  <label for="datepicker">Date:
+    <input type="text" id="datepicker" name="datepicker" onchange="changeDate()">
+  </label>
+  
   <!-- <button onclick="changeDate()">Submit</button> -->
   <br>
   <br>
@@ -30,7 +60,9 @@
   <label>Input Reps:
       <input id="reps" type="number" placeholder="Number of Repetitions">
   </label><br>
-  <button onclick="addExercise()">Submit</button>
+  
+  </section>
+  
 
   <h2>Exercise Log:</h2>
   <table id="table" border="1">
