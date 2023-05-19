@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI 라이브러리 -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <h1>Workout Tracker</h1>
+  <label for="datepicker">Date:</label>
+  <input type="text" id="datepicker" name="datepicker" onchange="changeDate()">
+  <!-- <button onclick="changeDate()">Submit</button> -->
+  <br>
+  <br>
+
+  <!-- 날짜 선택 버튼 만들기 -->
+
+  <label>Body Part:
+      <select id="bodypart"></select>
+  </label><br>
+  <label>Exercise:
+      <select id="exercise"></select>
+  </label><br>
+  <label>Input Weight:
+      <input id="weight" type="number" placeholder="in kg">
+  </label><br>
+  <label>Input Reps:
+      <input id="reps" type="number" placeholder="Number of Repetitions">
+  </label><br>
+  <button onclick="addExercise()">Submit</button>
+
+  <h2>Exercise Log:</h2>
+  <table id="table" border="1">
+      <thead>
+        <tr align = "center">
+            <th>Date</th>
+            <th>Body Part</th>
+            <th>Exercise</th>
+            <th>Weight</th>
+            <th>Reps</th>
+            <th>Delete</th>
+          </tr>
+      </thead>
+      <tbody id="tableBody" align="center"></tbody>
+  </table>
+
+
+
+  <script>
+    $(function() {
+      $("#datepicker").datepicker();
+    });
+  </script>
+  <script src="main.js"></script>
+  
+</body>
+</html>
